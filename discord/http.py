@@ -82,6 +82,7 @@ if TYPE_CHECKING:
     from .enums import ChannelType, InteractionType
     from .embeds import Embed
     from .poll import Poll
+    from .components import Component
 
     from .types import (
         application,
@@ -245,7 +246,7 @@ def handle_message_parameters(
     channel_payload: Dict[str, Any] = MISSING,
     applied_tags: Optional[SnowflakeList] = MISSING,
     poll: Optional[Poll] = MISSING,
-    components: Optional[List[dict]] = MISSING, 
+    components: Optional[List[Component]] = MISSING, 
 ) -> MultipartParameters:
     if files is not MISSING and file is not MISSING:
         raise TypeError('Cannot mix file and files keyword arguments.')
