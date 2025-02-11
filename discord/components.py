@@ -212,7 +212,7 @@ class Button(Component):
 
     def to_dict(self) -> ButtonInteractionData:
         return {
-            'component_type': self.type.value,
+            'type': self.type.value,
             'custom_id': self.custom_id or '',
         }
 
