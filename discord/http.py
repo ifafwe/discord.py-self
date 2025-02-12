@@ -246,7 +246,7 @@ def handle_message_parameters(
     channel_payload: Dict[str, Any] = MISSING,
     applied_tags: Optional[SnowflakeList] = MISSING,
     poll: Optional[Poll] = MISSING,
-    components: Optional[List[Component]] = MISSING, 
+    components: Optional[List[Dict]] = MISSING, 
 ) -> MultipartParameters:
     if files is not MISSING and file is not MISSING:
         raise TypeError('Cannot mix file and files keyword arguments.')
