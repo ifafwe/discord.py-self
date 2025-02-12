@@ -173,7 +173,7 @@ class AsyncWebhookAdapter:
                     to_send = form_data
 
                 try:
-                    print(f"extra debugly: params: {params}")
+                    print(f"extra debugly: params: {to_send}")
                     async with session.request(
                         method, url, data=to_send, headers=headers, params=params, proxy=proxy, proxy_auth=proxy_auth
                     ) as response:
