@@ -1375,6 +1375,7 @@ class Webhook(BaseWebhook):
         silent: bool = MISSING,
         applied_tags: List[ForumTag] = MISSING,
         poll: Poll = MISSING,
+        components: dict = MISSING,
     ) -> WebhookMessage:
         ...
 
@@ -1398,6 +1399,7 @@ class Webhook(BaseWebhook):
         silent: bool = MISSING,
         applied_tags: List[ForumTag] = MISSING,
         poll: Poll = MISSING,
+        components: dict = MISSING,
     ) -> None:
         ...
 
@@ -1420,6 +1422,7 @@ class Webhook(BaseWebhook):
         silent: bool = False,
         applied_tags: List[ForumTag] = MISSING,
         poll: Poll = MISSING,
+        components: dict = MISSING,
     ) -> Optional[WebhookMessage]:
         """|coro|
 
@@ -1565,6 +1568,7 @@ class Webhook(BaseWebhook):
             previous_allowed_mentions=previous_mentions,
             applied_tags=applied_tag_ids,
             poll=poll,
+            components=components
         ) as params:
             adapter = async_context.get()
             thread_id: Optional[int] = None
