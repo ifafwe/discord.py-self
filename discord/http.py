@@ -351,6 +351,7 @@ def handle_message_parameters(
         payload['poll'] = poll._to_dict()
 
     if components is not MISSING:
+        print(f"debugly: components: {components}")
         payload['components'] = components
 
     # Legacy uploading
